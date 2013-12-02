@@ -1,0 +1,27 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="programme.css">
+</head>
+<br> </br>
+
+<h1><%= Date.current.year %> Programme </h1>
+
+<table id="programme">
+    <thead>
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Description</th>
+        </tr>
+    </thead>
+  <tbody>
+ 
+    <!-- Function to read the newsletters from database -->
+    <% @programme.each do |programme| %>
+        <tr>
+          <td><%= programme.title %></td>
+          <td><%= programme.date %></td>
+          <td><%= programme.description %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

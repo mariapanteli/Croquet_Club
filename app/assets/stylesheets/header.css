@@ -1,0 +1,14 @@
+header h1{
+  font-family:"Lucida Console",  mononspace;
+  font-weight:bold;
+  text-align:center  
+  }
+
+header p{  
+padding:10px;
+text-align:center  
+}
+
+header {
+background-color:#FFDAB9 ;
+}

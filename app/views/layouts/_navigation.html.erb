@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="navigation.css">
+</head>
+
+<div id='cssmenu'>
+<nav>
+  <ul>
+    <li class='active'><%=link_to "Home", root_path %></li>
+    <li><%=link_to "About The Club", aboutTheClub_path %></li>
+    <li><%=link_to "How To Join", howToJoin_path %></li>
+    <li><%=link_to "What You Need", whatYouNeed_path %></li>
+    <li><%=link_to "Programme", programme_path %></li>
+    <li><%=link_to "News Letters" , newsLetters_path %></li>
+    <li><%=link_to "Club Matters" , clubMatters_path %></li>
+    <li><%=link_to "How To Get There", howToGetThere_path %></li>
+    <% if user_signed_in? %>
+    <li><%=link_to "Book A Lawn", bookings_path %></li>
+    <% end %>
+    <li><%=link_to "Links To Croquet Sites" , links_path %></li>
+    <li><%=link_to "Admin Login" , admin_path %></li> 
+    <li><%=link_to "Sign Up" , new_user_registration_path %></li> 
+    <% if user_signed_in? %>
+    <li class='last'><%=link_to "Sign Out" , destroy_user_session_path, :method => :delete %></li> 
+    <br> </br>
+    <p> </p>
+    Signed in as <%= current_user.email %>
+    <% else %>
+    <li class='last'><%=link_to "Sign In" , new_user_session_path %></li>
+    <% end %>    
+  </ul>
+</nav>
+</div>
+ 
+
+  
+    
