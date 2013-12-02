@@ -16,7 +16,7 @@ class CroquetController < ApplicationController
   end
 
   def Programme
-    @title = "Programme" 
+    @title = Date.current.year
     @programme = Programme.where("date >= ?", Date.today)
   end
 
